@@ -1,3 +1,7 @@
+# This code returns the index of first and last postision of an element 
+# The list must be sorted
+# https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ 
+
 class Solution(object):
     def searchRange(self, nums, target):
         """
@@ -28,6 +32,10 @@ class Solution(object):
         end = startEnd(nums, target, False)
 
         return [start, end]
+    
+sol = Solution()
+a = sol.searchRange([2,4,4,4,6,6,9,10],6)
+print(a)
 
 '''
                 BRUTEFORCE METHOD
