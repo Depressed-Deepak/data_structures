@@ -4,8 +4,6 @@
 # output: 4 because in the array there are four numbers which has even digits
 
 
-
-
 def evenDigits(arr):
     
     count = 0
@@ -28,16 +26,22 @@ def evenDigits(arr):
 
 
 def even(num):  
+    
+    if num == 0:
+        return 1
+    
+    if num < 0:
+        num = num * (-1) 
+    
     counter = 0
     while num > 0:
-        num = num / 10
         counter += 1
-    return counter % 2 == 0
-    
+        num = num // 10 
+    # return counter % 2 == 0
+    return counter
 
 a = evenDigits([1,24,345,67,8888,88])
 print(a)
-
 
 
     
